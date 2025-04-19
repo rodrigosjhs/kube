@@ -6,9 +6,9 @@ pipeline {
         }
     }
     stages {
-        stage('Deploy') {
+        stage('Build') {
             steps {
-                sh 'kubectl cluster-info'
+                sh 'docker build -t ${JOB_NAME} -f Dockerfile .'
             }
         }
     }
