@@ -9,5 +9,5 @@ spec:
     - sleep
     args:
     - infinity
-#    securityContext:
-#      runAsUser: 0
+    securityContext:
+      runAsUser: 1000
