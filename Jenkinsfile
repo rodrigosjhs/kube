@@ -7,7 +7,7 @@ pipeline {
                 label 'node116 || node117' // Define o agente específico para essa etapa
             }
             steps {
-                sh 'docker build -t ${JOB_NAME} -f Dockerfile . --no-cache' // Constrói imagem Docker
+                sh 'sleep 10 ; docker build -t ${JOB_NAME} -f Dockerfile . --no-cache' // Constrói imagem Docker
             }
         }
 
