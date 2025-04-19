@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                label 'node116' // Define o agente específico para essa etapa
+                label 'node116 || node117' // Define o agente específico para essa etapa
             }
             steps {
                 sh 'docker build -t ${JOB_NAME} -f Dockerfile .' // Constrói imagem Docker
